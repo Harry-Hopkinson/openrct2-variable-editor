@@ -14,10 +14,19 @@ export const allWidgets = tabwindow({
   },
   tabs: [
     tab({
-      image: "search",
+      image: "path_surfaces",
       content: [
         label({
           text: "Select a plugin to view more information",
+          alignment: "centred",
+        }),
+      ],
+    }),
+    tab({
+      image: "simulate",
+      content: [
+        label({
+          text: "Ride Variables",
           alignment: "centred",
         }),
       ],
