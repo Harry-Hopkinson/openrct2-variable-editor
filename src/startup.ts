@@ -1,4 +1,4 @@
-import { box, tab, label, tabwindow } from "openrct2-flexui";
+import { tab, label, tabwindow } from "openrct2-flexui";
 
 export const allWidgets = tabwindow({
   title: "OpenRCT2 Variable Editor",
@@ -8,7 +8,7 @@ export const allWidgets = tabwindow({
     max: 10_000,
   },
   height: {
-    value: 400,
+    value: 300,
     min: 150,
     max: 10_000,
   },
