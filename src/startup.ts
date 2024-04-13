@@ -14,19 +14,32 @@ export const allWidgets = tabwindow({
   },
   tabs: [
     tab({
-      image: "path_surfaces",
+      image: {
+        frameBase: 5466,
+        frameCount: 1,
+        frameDuration: 1,
+      },
       content: [
         label({
-          text: "Select a plugin to view more information",
+          text: "Park Variables",
           alignment: "centred",
         }),
       ],
     }),
     tab({
-      image: "simulate",
+      image: "ride_stations",
       content: [
         label({
           text: "Ride Variables",
+          alignment: "centred",
+        }),
+      ],
+    }),
+    tab({
+      image: "sort",
+      content: [
+        label({
+          text: "Stats Variables",
           alignment: "centred",
         }),
       ],

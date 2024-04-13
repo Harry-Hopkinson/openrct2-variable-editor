@@ -22,16 +22,13 @@ async function getOutput() {
   const pluginPath = `OpenRCT2/plugin/${options.filename}`;
 
   if (platform === "win32") {
-    // Windows
     const { stdout } = await promisify(exec)(
       "powershell -command \"[Environment]::GetFolderPath('MyDocuments')\""
     );
     return `${stdout.trim()}/${pluginPath}`;
   } else if (platform === "darwin") {
-    // MacOS
     return `${homedir()}/Library/Application Support/${pluginPath}`;
   } else {
-    // Linux
     const configFolder = process.env.XDG_CONFIG_HOME || `${homedir()}/.config`;
     return `${configFolder}/${pluginPath}`;
   }
