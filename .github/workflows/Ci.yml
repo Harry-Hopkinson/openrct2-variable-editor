@@ -23,7 +23,7 @@ jobs:
           yarn lint
       - name: Fetch OpenRCT2 Scripting Api
         run: |
-          mkdir lib && cd lib
+          cd lib
           sh FetchOpenRCT2Api.sh
           cd ..
       - name: Compiler 🏗️
