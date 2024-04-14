@@ -1,6 +1,6 @@
 // @ts-ignore
 import * as info from "./info.js";
-import { startup } from "./startup";
+import { Main } from "./main";
 
 registerPlugin({
   name: info.name,
@@ -9,5 +9,5 @@ registerPlugin({
   type: info.type,
   licence: info.license,
   targetApiVersion: info.targetApiVersion,
-  main: startup,
+  main: Main,
 });
