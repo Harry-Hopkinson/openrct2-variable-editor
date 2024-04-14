@@ -23,7 +23,7 @@ async function getOutput() {
 
   if (platform === "win32") {
     const { stdout } = await promisify(exec)(
-      "powershell -command \"[Environment]::GetFolderPath('MyDocuments')\""
+      "powershell -command \"[Environment]::GetFolderPath('MyDocuments')\"",
     );
     return `${stdout.trim()}/${pluginPath}`;
   } else if (platform === "darwin") {
