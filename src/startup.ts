@@ -51,7 +51,7 @@ export const allWidgets = tabwindow({
               text: parkCash,
               width: 50,
               onChange: (text: string) => {
-                park.cash = parseFloat(text);
+                park.cash = parseFloat(text) * 10;
               },
             }),
           ],
@@ -85,7 +85,7 @@ export function startup() {
     ui.registerMenuItem(menuItemName, () => allWidgets.open());
     context.subscribe("interval.day", () => {
       parkEntranceFee.set(park.entranceFee.toString());
-      parkCash.set(park.cash.toString());
+      parkCash.set((park.cash / 10).toString());
     });
   }
 }
