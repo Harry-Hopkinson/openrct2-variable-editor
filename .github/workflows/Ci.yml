@@ -24,7 +24,7 @@ jobs:
       - name: Fetch OpenRCT2 Scripting Api
         run: |
           mkdir lib && cd lib
-          wget https://raw.githubusercontent.com/OpenRCT2/OpenRCT2/develop/distribution/openrct2.d.ts
+          sh FetchOpenRCT2Api.sh
           cd ..
       - name: Compiler 🏗️
         run: |
