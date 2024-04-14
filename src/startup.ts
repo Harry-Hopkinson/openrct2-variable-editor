@@ -16,7 +16,7 @@ export const allWidgets = tabwindow({
     max: 10_000,
   },
   height: {
-    value: 300,
+    value: 350,
     min: 150,
     max: 10_000,
   },
@@ -49,7 +49,7 @@ export const allWidgets = tabwindow({
             }),
             textbox({
               text: parkCash,
-              width: 50,
+              width: 75,
               onChange: (text: string) => {
                 park.cash = parseFloat(text) * 10;
               },
@@ -84,7 +84,7 @@ export function startup() {
     const menuItemName = "Variable Editor";
     ui.registerMenuItem(menuItemName, () => allWidgets.open());
     context.subscribe("interval.day", () => {
-      parkEntranceFee.set(park.entranceFee.toString());
+      parkEntranceFee.set((park.entranceFee / 10).toString());
       parkCash.set((park.cash / 10).toString());
     });
   }
