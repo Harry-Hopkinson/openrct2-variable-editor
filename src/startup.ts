@@ -1,4 +1,12 @@
-import { tab, label, tabwindow } from "openrct2-flexui";
+import {
+  tab,
+  label,
+  tabwindow,
+  groupbox,
+  LayoutDirection,
+  textbox,
+} from "openrct2-flexui";
+import { parkEntranceFee, parkCash } from "./stores";
 
 export const allWidgets = tabwindow({
   title: "OpenRCT2 Variable Editor",
@@ -20,9 +28,33 @@ export const allWidgets = tabwindow({
         frameDuration: 1,
       },
       content: [
-        label({
+        groupbox({
           text: "Park Variables",
-          alignment: "centred",
+          direction: LayoutDirection.Horizontal,
+          content: [
+            label({
+              text: "Park Entrance Fee",
+              alignment: "centred",
+            }),
+            textbox({
+              text: parkEntranceFee,
+              width: 50,
+              onChange: (text: string) => {
+                park.entranceFee = parseFloat(text) * 10;
+              },
+            }),
+            label({
+              text: "Park Cash",
+              alignment: "centred",
+            }),
+            textbox({
+              text: parkCash,
+              width: 50,
+              onChange: (text: string) => {
+                park.cash = parseFloat(text);
+              },
+            }),
+          ],
         }),
       ],
     }),
@@ -51,5 +83,9 @@ export function startup() {
   if (typeof ui !== "undefined") {
     const menuItemName = "Variable Editor";
     ui.registerMenuItem(menuItemName, () => allWidgets.open());
+    context.subscribe("interval.day", () => {
+      parkEntranceFee.set(park.entranceFee.toString());
+      parkCash.set(park.cash.toString());
+    });
   }
 }
