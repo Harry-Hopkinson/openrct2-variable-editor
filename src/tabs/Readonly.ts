@@ -5,7 +5,11 @@ import {
   LayoutDirection,
   label,
 } from "openrct2-flexui";
-import { guests, suggestedGuestMaximum } from "../stores";
+import {
+  guests,
+  suggestedGuestMaximum,
+  guestGenerationProbability,
+} from "../stores";
 
 export function ReadOnlyTab(): TabCreator {
   return tab({
@@ -28,6 +32,18 @@ export function ReadOnlyTab(): TabCreator {
           }),
           label({
             text: suggestedGuestMaximum,
+          }),
+        ],
+      }),
+      groupbox({
+        direction: LayoutDirection.Horizontal,
+        content: [
+          label({
+            text: "Guest Generation Probability",
+            alignment: "left",
+          }),
+          label({
+            text: guestGenerationProbability,
           }),
         ],
       }),
