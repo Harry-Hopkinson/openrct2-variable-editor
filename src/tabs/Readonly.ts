@@ -1,12 +1,28 @@
-import { tab, label, TabCreator } from "openrct2-flexui";
+import {
+  tab,
+  TabCreator,
+  groupbox,
+  LayoutDirection,
+  label,
+} from "openrct2-flexui";
+import { guests } from "../stores";
 
 export function ReadOnlyTab(): TabCreator {
   return tab({
     image: "view",
     content: [
-      label({
+      groupbox({
         text: "Readonly Variables",
-        alignment: "centred",
+        direction: LayoutDirection.Horizontal,
+        content: [
+          label({
+            text: "Guests",
+            alignment: "left",
+          }),
+          label({
+            text: guests,
+          }),
+        ],
       }),
     ],
   });

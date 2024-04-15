@@ -10,3 +10,9 @@ A variable editor for OpenRCT2 that provides an easy to use UI for editing core 
 | Park Cash         | The current cash for the park         |
 | Park Rating       | The current rating of the park        |
 | Bank Loan         | The current loan of the park          |
+
+## Readonly Variables
+
+| Readonly Variables | Information                              |
+| ------------------ | ---------------------------------------- |
+| Guests             | The current number of guests in the park |
