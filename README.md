@@ -13,6 +13,7 @@ A variable editor for OpenRCT2 that provides an easy to use UI for editing core 
 
 ## Readonly Variables
 
-| Readonly Variables | Information                              |
-| ------------------ | ---------------------------------------- |
-| Guests             | The current number of guests in the park |
+| Readonly Variables | Information                                            |
+| ------------------ | ------------------------------------------------------ |
+| Guests             | The current number of guests in the park               |
+| Soft Guest Cap     | The maximum number of guests that will spawn naturally |

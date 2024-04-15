@@ -5,7 +5,7 @@ import {
   LayoutDirection,
   label,
 } from "openrct2-flexui";
-import { guests } from "../stores";
+import { guests, suggestedGuestMaximum } from "../stores";
 
 export function ReadOnlyTab(): TabCreator {
   return tab({
@@ -21,6 +21,13 @@ export function ReadOnlyTab(): TabCreator {
           }),
           label({
             text: guests,
+          }),
+          label({
+            text: "Soft Guest Cap",
+            alignment: "left",
+          }),
+          label({
+            text: suggestedGuestMaximum,
           }),
         ],
       }),

@@ -8,6 +8,7 @@ let bankLoan = store(`${park.bankLoan / 10}`);
 
 // Readonly Variables
 let guests = store(`${park.guests}`);
+let suggestedGuestMaximum = store(`${park.suggestedGuestMaximum}`);
 
 export function UpdateStores() {
   parkEntranceFee.set((park.entranceFee / 10).toString());
@@ -15,6 +16,14 @@ export function UpdateStores() {
   parkRating.set(park.rating.toString());
   bankLoan.set((park.bankLoan / 10).toString());
   guests.set(park.guests.toString());
+  suggestedGuestMaximum.set(park.suggestedGuestMaximum.toString());
 }
 
-export { parkEntranceFee, parkCash, parkRating, bankLoan, guests };
+export {
+  parkEntranceFee,
+  parkCash,
+  parkRating,
+  bankLoan,
+  guests,
+  suggestedGuestMaximum,
+};
