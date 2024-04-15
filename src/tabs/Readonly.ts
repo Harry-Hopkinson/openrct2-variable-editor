@@ -9,6 +9,7 @@ import {
   guests,
   suggestedGuestMaximum,
   guestGenerationProbability,
+  guestInitialCash,
 } from "../stores";
 
 export function ReadOnlyTab(): TabCreator {
@@ -22,16 +23,20 @@ export function ReadOnlyTab(): TabCreator {
           label({
             text: "Guests",
             alignment: "left",
+            tooltip: "The number of guests in the park",
           }),
           label({
             text: guests,
+            tooltip: "The number of guests in the park",
           }),
           label({
             text: "Soft Guest Cap",
             alignment: "left",
+            tooltip: "The maximum number of guests that will spawn naturally",
           }),
           label({
             text: suggestedGuestMaximum,
+            tooltip: "The maximum number of guests that will spawn naturally",
           }),
         ],
       }),
@@ -39,11 +44,22 @@ export function ReadOnlyTab(): TabCreator {
         direction: LayoutDirection.Horizontal,
         content: [
           label({
-            text: "Guest Generation Probability",
+            text: "Generation Probability",
             alignment: "left",
+            tooltip: "The probability of a guest being generated each tick.",
           }),
           label({
             text: guestGenerationProbability,
+            tooltip: "The probability of a guest being generated each tick.",
+          }),
+          label({
+            text: "Guest Initial Cash",
+            alignment: "left",
+            tooltip: "The average amount of cash guests will spawn with.",
+          }),
+          label({
+            text: guestInitialCash,
+            tooltip: "The average amount of cash guests will spawn with.",
           }),
         ],
       }),

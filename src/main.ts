@@ -8,8 +8,8 @@ import { ReadOnlyTab } from "./tabs/Readonly";
 export const AllWidgets = tabwindow({
   title: "OpenRCT2 Variable Editor",
   width: {
-    value: 400,
-    min: 150,
+    value: 425,
+    min: 425,
     max: 10_000,
   },
   height: {
