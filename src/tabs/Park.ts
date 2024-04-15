@@ -6,7 +6,7 @@ import {
   textbox,
   TabCreator,
 } from "openrct2-flexui";
-import { parkEntranceFee, parkCash } from "../stores";
+import { parkEntranceFee, parkCash, parkRating, bankLoan } from "../stores";
 
 export function ParkTab(): TabCreator {
   return tab({
@@ -42,6 +42,35 @@ export function ParkTab(): TabCreator {
             width: 75,
             onChange: (text: string) => {
               park.cash = parseFloat(text) * 10;
+            },
+          }),
+        ],
+      }),
+      groupbox({
+        direction: LayoutDirection.Horizontal,
+        content: [
+          label({
+            text: "Park Rating",
+            alignment: "left",
+          }),
+          textbox({
+            text: parkRating,
+            width: 50,
+            tooltip: "The rating of the park.",
+            onChange: (text: string) => {
+              park.rating = parseFloat(text);
+            },
+          }),
+          label({
+            text: "Bank Loan",
+            alignment: "centred",
+          }),
+          textbox({
+            text: bankLoan,
+            tooltip: "The amount of money the park has borrowed.",
+            width: 75,
+            onChange: (text: string) => {
+              park.bankLoan = parseFloat(text) * 10;
             },
           }),
         ],
