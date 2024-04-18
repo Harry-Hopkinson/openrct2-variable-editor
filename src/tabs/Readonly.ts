@@ -12,6 +12,7 @@ import {
   guestInitialCash,
   guestInitialHappiness,
   guestInitialHunger,
+  guestInitialThirst,
 } from "../stores";
 
 export function ReadOnlyTab(): TabCreator {
@@ -85,6 +86,20 @@ export function ReadOnlyTab(): TabCreator {
           label({
             text: guestInitialHunger,
             tooltip: "The average hunger guests will spawn at out of 255.",
+          }),
+        ],
+      }),
+      groupbox({
+        direction: LayoutDirection.Horizontal,
+        content: [
+          label({
+            text: "Guest Initial Thirst",
+            alignment: "left",
+            tooltip: "The average thirst guests will spawn at out of 255.",
+          }),
+          label({
+            text: guestInitialThirst,
+            tooltip: "The average thirst guests will spawn at out of 255.",
           }),
         ],
       }),
