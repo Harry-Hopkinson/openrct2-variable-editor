@@ -21,3 +21,7 @@ A variable editor for OpenRCT2 that provides an easy to use UI for editing core 
 | Guest Initial Cash           | The average amount of money a guest will spawn with.          |
 | Guest Initial Happiness      | The average happiness guests will spawn at out of 255.        |
 | Guest Initial Hunger         | The average hunger guests will spawn at out of 255.           |
+
+## Thanks
+
+This plugin was built using Bassie's Flex UI library. You can find it [here](https://github.com/Basssiiie/OpenRCT2-FlexUI).
