@@ -10,6 +10,7 @@ import {
   suggestedGuestMaximum,
   guestGenerationProbability,
   guestInitialCash,
+  guestInitialHappiness,
 } from "../stores";
 
 export function ReadOnlyTab(): TabCreator {
@@ -60,6 +61,20 @@ export function ReadOnlyTab(): TabCreator {
           label({
             text: guestInitialCash,
             tooltip: "The average amount of cash guests will spawn with.",
+          }),
+        ],
+      }),
+      groupbox({
+        direction: LayoutDirection.Horizontal,
+        content: [
+          label({
+            text: "Guest Initial Happiness",
+            alignment: "left",
+            tooltip: "The average happiness guests will spawn at out of 255.",
+          }),
+          label({
+            text: guestInitialHappiness,
+            tooltip: "The average happiness guests will spawn at out of 255.",
           }),
         ],
       }),

@@ -11,6 +11,7 @@ let guests = store(`${park.guests}`);
 let suggestedGuestMaximum = store(`${park.suggestedGuestMaximum}`);
 let guestGenerationProbability = store(`${park.guestGenerationProbability}`);
 let guestInitialCash = store(`${park.guestInitialCash / 10}`);
+let guestInitialHappiness = store(`${park.guestInitialHappiness}`);
 
 export function UpdateStores() {
   parkEntranceFee.set((park.entranceFee / 10).toString());
@@ -21,6 +22,7 @@ export function UpdateStores() {
   suggestedGuestMaximum.set(park.suggestedGuestMaximum.toString());
   guestGenerationProbability.set(park.guestGenerationProbability.toString());
   guestInitialCash.set((park.guestInitialCash / 10).toString());
+  guestInitialHappiness.set(park.guestInitialHappiness.toString());
 }
 
 export {
@@ -32,4 +34,5 @@ export {
   suggestedGuestMaximum,
   guestGenerationProbability,
   guestInitialCash,
+  guestInitialHappiness,
 };

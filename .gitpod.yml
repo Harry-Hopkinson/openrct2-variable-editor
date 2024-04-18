@@ -1,0 +1,5 @@
+tasks:
+  - init: yarn install && brew install wget
+    command: cd lib && sh FetchOpenRCT2Api.sh && cd .. && yarn build
+
+

@@ -19,3 +19,4 @@ A variable editor for OpenRCT2 that provides an easy to use UI for editing core 
 | Soft Guest Cap               | The maximum number of guests that will spawn naturally.       |
 | Guest Generation Probability | The probability out of 65535 that guests will spawn per tick. |
 | Guest Initial Cash           | The average amount of money a guest will spawn with.          |
+| Guest Initial Happiness      | The average happiness guests will spawn at out of 255.        |
