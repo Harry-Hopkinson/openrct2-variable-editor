@@ -11,6 +11,7 @@ import {
   guestGenerationProbability,
   guestInitialCash,
   guestInitialHappiness,
+  guestInitialHunger,
 } from "../stores";
 
 export function ReadOnlyTab(): TabCreator {
@@ -75,6 +76,15 @@ export function ReadOnlyTab(): TabCreator {
           label({
             text: guestInitialHappiness,
             tooltip: "The average happiness guests will spawn at out of 255.",
+          }),
+          label({
+            text: "Guest Initial Hunger",
+            alignment: "left",
+            tooltip: "The average hunger guests will spawn at out of 255.",
+          }),
+          label({
+            text: guestInitialHunger,
+            tooltip: "The average hunger guests will spawn at out of 255.",
           }),
         ],
       }),

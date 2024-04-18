@@ -20,3 +20,4 @@ A variable editor for OpenRCT2 that provides an easy to use UI for editing core 
 | Guest Generation Probability | The probability out of 65535 that guests will spawn per tick. |
 | Guest Initial Cash           | The average amount of money a guest will spawn with.          |
 | Guest Initial Happiness      | The average happiness guests will spawn at out of 255.        |
+| Guest Initial Hunger         | The average hunger guests will spawn at out of 255.           |
