@@ -13,6 +13,7 @@ import {
   guestInitialHappiness,
   guestInitialHunger,
   guestInitialThirst,
+  totalRideValueForMoney,
 } from "../stores";
 
 export function ReadOnlyTab(): TabCreator {
@@ -100,6 +101,17 @@ export function ReadOnlyTab(): TabCreator {
           label({
             text: guestInitialThirst,
             tooltip: "The average thirst guests will spawn at out of 255.",
+          }),
+          label({
+            text: "Total Ride Value For Money",
+            alignment: "left",
+            tooltip:
+              "The sum of ride values, used to determine what guests will pay for park entry.",
+          }),
+          label({
+            text: totalRideValueForMoney,
+            tooltip:
+              "The sum of ride values, used to determine what guests will pay for park entry.",
           }),
         ],
       }),

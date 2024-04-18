@@ -15,13 +15,17 @@ let guestInitialCash = store(`${park.guestInitialCash / 10}`);
 let guestInitialHappiness = store(`${park.guestInitialHappiness}`);
 let guestInitialHunger = store(`${park.guestInitialHunger}`);
 let guestInitialThirst = store(`${park.guestInitialThirst}`);
+let totalRideValueForMoney = store(`${park.totalRideValueForMoney / 10}`);
 
 export function UpdateStores() {
+  // Park Variables
   parkValue.set(park.value.toString());
   parkCash.set((park.cash / 10).toString());
   parkRating.set(park.rating.toString());
   bankLoan.set((park.bankLoan / 10).toString());
   parkEntranceFee.set((park.entranceFee / 10).toString());
+
+  // Readonly Variables
   guests.set(park.guests.toString());
   suggestedGuestMaximum.set(park.suggestedGuestMaximum.toString());
   guestGenerationProbability.set(park.guestGenerationProbability.toString());
@@ -29,6 +33,7 @@ export function UpdateStores() {
   guestInitialHappiness.set(park.guestInitialHappiness.toString());
   guestInitialHunger.set(park.guestInitialHunger.toString());
   guestInitialThirst.set(park.guestInitialThirst.toString());
+  totalRideValueForMoney.set((park.totalRideValueForMoney / 10).toString());
 }
 
 export {
@@ -44,4 +49,5 @@ export {
   guestInitialHappiness,
   guestInitialHunger,
   guestInitialThirst,
+  totalRideValueForMoney,
 };
