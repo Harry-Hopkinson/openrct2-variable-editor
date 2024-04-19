@@ -1,6 +1,6 @@
 {
   "name": "openrct2-variable-editor",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "description": "UI for editing OpenRCT2 variables",
   "scripts": {
